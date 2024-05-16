@@ -1,0 +1,3 @@
+{worksDetails.map((work) => {
+return <h1 key={work.id}> {work.name}</h1>
+})}
