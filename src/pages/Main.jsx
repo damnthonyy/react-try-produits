@@ -1,7 +1,13 @@
-import Gallery from "../components/Gallery.jsx";
+/* import Card from "../components/Card"; */
+
+import Navbar from "../components/Navbar.jsx";
+
 
 export default function Main() {
     return (
-        <Gallery />
+        <>
+            <Navbar />
+        </>
+
     )
 }

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import worksDetails from '../data.js';
 
 import '../scss/card.scss';
-import Gallery from './Gallery.jsx';
+
 
 
 
@@ -33,7 +33,7 @@ export default function Card() {
                                 <h1 className='name-projet' style={{ fontSize: "20px" }}> {work.name}</h1>
                                 <p className='date-projet' style={{ fontSize: "16px" }}> {work.date}</p>
                             </div>
-                            <link to={`/works/${work.id}`}> view details</link>
+
                         </div>
 
 
