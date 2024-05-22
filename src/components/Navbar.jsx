@@ -13,10 +13,10 @@ export default function Navbar() {
     useEffect(() => {
         const showMenu = () => {
             const currentScrollY = window.scrollY;
-            if (lastScrollY.current - currentScrollY > 10) {
+            if (lastScrollY.current - currentScrollY > 5) {
                 handleShow(true);
 
-            } else if (currentScrollY - lastScrollY.current > 10) {
+            } else if (currentScrollY - lastScrollY.current > 5) {
                 handleShow(false);
             }
             lastScrollY.current = currentScrollY;
