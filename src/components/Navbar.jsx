@@ -40,6 +40,11 @@ export default function Navbar() {
 
     }, [])
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleNav = () => setIsOpen(!isOpen);
+
+
     return (
 
         <div className="navBar">
@@ -47,7 +52,7 @@ export default function Navbar() {
                 < Link to="/" className="logo">
                     Glense.<span className='logoS'>studio</span>
                 </Link >
-                <nav className="navLink" style={{ display: show ? 'flex' : 'none' }} >
+                <nav className={`navLink ${isOpen ? "isActive" : ""}`} style={{ display: show ? 'flex' : 'none' }}>
                     <div className='linkQuery'>
                         <span className='link'> <Link className='Link' to="/">home</Link> </span>
                         <span className='link'> <Link className='Link' to="/Studio">studio</Link> </span>
@@ -68,7 +73,7 @@ export default function Navbar() {
                     </div>
                 </nav>
                 {!show && <div className="menu">Menu</div>}
-                <div className='menuMobile'> Menu</div>
+                <div className='menuMobile' onClick={toggleNav} > Menu</div>
             </div>
         </div>
 

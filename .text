@@ -1,0 +1,7 @@
+je veux toggle afficher/fermer la navbar lorsque je click sur le mot menu. j'ai un bout de code mais je sais pas comment le finir const [showNav, handleShowNav] = useState(false);
+    useEffect(() => {
+        const showNav = () => {
+            if (style = {{top: showNav ? '0' : '-100vh'}})
+        } showNav(true);
+    
+    }, [])
