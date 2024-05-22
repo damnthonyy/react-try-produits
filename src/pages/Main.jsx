@@ -1,12 +1,13 @@
-/* import Card from "../components/Card"; */
 
-import Navbar from "../components/Navbar.jsx";
+
+
+import Hero from "../components/Hero.jsx";
 
 
 export default function Main() {
     return (
         <>
-            <Navbar />
+            <Hero />
         </>
 
     )

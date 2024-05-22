@@ -9,18 +9,28 @@
         padding: 20px 40px 20px 40px;
         display: flex;
         justify-content: space-between;
+        z-index: 999;
+        background-color: #FFF;
+        align-items: center;
     }
 
     .logo {
         font-family: Arial, Helvetica, sans-serif;
         text-transform: uppercase;
         font-size: 24px;
+        color: #222;
+
+        .logoS {
+            font-size: 16px;
+            text-transform: uppercase;
+        }
     }
 
     .navLink {
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
         gap: 2rem;
+        color: #222;
     }
 
     .link {
@@ -28,5 +38,6 @@
         font-size: 16px;
         text-transform: uppercase;
         font-weight: 300;
+        color: #222;
     }
 }

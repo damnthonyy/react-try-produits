@@ -1,0 +1,32 @@
+.contentTitleHero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 25vh;
+    left: 0;
+    right: 0;
+
+    .titleHero {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #222;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .sHero {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #222;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+}

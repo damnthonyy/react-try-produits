@@ -1,10 +1,10 @@
 import './reset.scss';
 
 
-import Main from './pages/Main.jsx';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Card from './components/Card.jsx';
 
+import { BrowserRouter as Router, Route, Routes, } from 'react-router-dom';
+import Navbar from './components/Navbar.jsx';
+import Main from "./pages/Main.jsx";
 import Studio from "./pages/Studio.jsx";
 import Services from "./pages/Services.jsx";
 import Contacts from "./pages/Contacts.jsx";
@@ -14,8 +14,9 @@ import Gallery from "./pages/Gallery.jsx";
 const App = () => {
   return (
     <>
-      <Main />
+
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/Studio" element={<Studio />} />
