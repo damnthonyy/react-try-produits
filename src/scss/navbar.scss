@@ -5,12 +5,13 @@
     right: 0;
     width: 100%;
 
+    z-index: 9;
+    background-color: #FFF;
+
     .navBarContent {
         padding: 20px 40px 20px 40px;
         display: flex;
         justify-content: space-between;
-        z-index: 999;
-        background-color: #FFF;
         align-items: center;
     }
 

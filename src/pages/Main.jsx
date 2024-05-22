@@ -1,4 +1,4 @@
-
+import "../scss/main.scss";
 
 
 import Hero from "../components/Hero.jsx";
