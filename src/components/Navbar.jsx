@@ -1,21 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import '../scss/navbar.scss';
 
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
 
-    const [show, handleShow] = useState(false);
-    const showMenu = () => {
-        if (window.scrollY > 100) {
-            handleShow(true);
-        } else {
-            handleShow(false)
-        }
-    }
+    const [show, handleShow] = useState(true);
+    const lastScrollY = useRef(0);
+
     useEffect(() => {
-        window.addEventListener("scroll", handleShow)
-        return () => window.removeEventListener("scroll", handleShow);
+
+        const showMenu = () => {
+            const currentScrollY = window.scrollY;
+            if (lastScrollY.current - currentScrollY > 10) {
+                handleShow(true);
+
+            } else if (currentScrollY - lastScrollY.current > 10) {
+                handleShow(false);
+            }
+            lastScrollY.current = currentScrollY;
+        }
+
+        window.addEventListener("scroll", showMenu)
+        return () => window.removeEventListener("scroll", showMenu);
+
     }, [])
 
     return (
@@ -25,13 +33,14 @@ export default function Navbar() {
                 < Link to="/" className="logo">
                     Glense.<span className='logoS'>studio</span>
                 </Link >
-                <nav className="navLink">
+                <nav className="navLink" style={{ display: show ? 'flex' : 'none' }} >
                     <span className='link'> <Link className='Link' to="/">home</Link> </span>
                     <span className='link'> <Link className='Link' to="/Studio">studio</Link> </span>
                     <span className='link'><Link className='Link' to="/Gallery">gallery</Link> </span>
                     <span className='link'><Link className='Link' to="/Services">services</Link> </span>
                     <span className='link'><Link className='Link' to="/Contacts">Contacts</Link></span>
                 </nav>
+                {!show && <div className="menu">Menu</div>}
             </div>
         </div>
 
