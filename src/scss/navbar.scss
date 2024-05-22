@@ -67,6 +67,101 @@
     }
 }
 
+@media(700px<=width<=1200px) {
+
+    .navBar {
+
+        .navBarContent {
+            padding: 20px 10px 20px 10px;
+        }
+
+        .navLink {
+            background-color: #D9D9D9;
+            display: block !important;
+            top: -100vh;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            transition: ease-in-out 1s;
+        }
+
+        .navLink.isActive {
+            background-color: #D9D9D9;
+            display: block !important;
+            top: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            transition: ease-in-out 1s;
+        }
+
+        .menu {
+            display: none !important;
+        }
+
+        .menuMobile {
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .linkQuery {
+            margin-top: 10vh;
+            margin-left: 10vw;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+
+            .Link {
+                font-size: 40px;
+            }
+        }
+
+        .rMobile {
+            display: block !important;
+            margin-top: 35vh;
+            padding-left: 2vw;
+            padding-right: 2vw;
+
+            .rMobileContent {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+
+                .styleF {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 10px;
+                    color: #222;
+                    text-transform: uppercase;
+
+                    .rs {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 10px;
+                        color: #222;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                    }
+                }
+
+                .x-1 {
+                    display: flex;
+                    gap: 2vw;
+                }
+            }
+        }
+    }
+
+}
+
 @media(320px<=width<=700px) {
 
     .navBar {

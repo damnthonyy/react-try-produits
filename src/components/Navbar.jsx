@@ -7,19 +7,6 @@ export default function Navbar() {
 
 
 
-    function useWindowWidth() {
-        const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-        useEffect(() => {
-            const handleResize = () => setWindowWidth(window.innerWidth);
-            window.addEventListener('resize', handleResize);
-
-            return () => window.removeEventListener('resize', handleResize);
-        }, []);
-
-        return windowWidth;
-    }
-
     const [show, handleShow] = useState(true);
     const lastScrollY = useRef(0);
 
@@ -75,6 +62,7 @@ export default function Navbar() {
                 </nav>
                 {!show && <div className="menu">Menu</div>}
                 <div className='menuMobile' onClick={toggleNav} > Menu</div>
+
             </div>
         </div>
 
