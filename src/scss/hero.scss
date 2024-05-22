@@ -30,3 +30,19 @@
         text-transform: uppercase;
     }
 }
+
+
+@media(320px<=width<=700px) {
+
+    .contentTitleHero {
+
+        .titleHero {
+            font-size: 24px;
+        }
+
+        .sHero {
+            font-size: 12px;
+        }
+    }
+
+}
