@@ -27,11 +27,11 @@
         }
     }
 
-    .navLink {
-        font-family: Arial, Helvetica, sans-serif;
+    .navLink {}
+
+    .linkQuery {
         display: flex;
         gap: 2rem;
-        color: #222;
     }
 
     .menu {
@@ -40,6 +40,18 @@
         font-size: 12px;
         text-transform: uppercase;
         cursor: pointer;
+    }
+
+    .menuMobile {
+        display: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .rMobile {
+        display: none;
     }
 
     .link {
@@ -53,4 +65,76 @@
     .Link {
         color: #222;
     }
+}
+
+@media(320px<=width<=700px) {
+
+    .navBar {
+
+        .navBarContent {
+            padding: 20px 10px 20px 10px;
+        }
+
+        .navLink {
+            background-color: #D9D9D9;
+            display: block !important;
+            top: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            transition: ease-in-out 1s;
+        }
+
+        .menu {
+            display: none !important;
+        }
+
+        .menuMobile {
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .linkQuery {
+            margin-top: 10vh;
+            margin-left: 10vw;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+
+            .Link {
+                font-size: 40px;
+            }
+        }
+
+        .rMobile {
+            display: block !important;
+            margin-top: 35vh;
+
+            .rMobileContent {
+
+
+                .styleF {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 10px;
+                    color: #222;
+                    text-transform: uppercase;
+
+                    .rs {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 10px;
+                        color: #222;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
 }
