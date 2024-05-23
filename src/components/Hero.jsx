@@ -14,21 +14,21 @@ export default function Hero() {
 
             <div className='hero-photo'>
 
-                <div className='card' style={{ display: 'inline-flex', flexDirection: 'column', position: 'relative', width: '690px', height: '763px' }}>
-                    <div className='details-card' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div className='card' >
+                    <div className='details-card' >
                         <div className='random style-details-card'>random</div>
                         <div className='index style-details-card'>[00]</div>
                     </div>
-                    <div className='card-photo' style={{ height: 'inherit', width: 'inherit', backgroundColor: '#D2D2D2' }}>
+                    <div className='card-photo' >
 
                     </div>
                 </div>
-                <div className='card-2' style={{ display: 'inline-flex', flexDirection: 'column', position: 'relative', width: '690px', height: '763px' }}>
-                    <div className='details-card' style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div className='card-2' >
+                    <div className='details-card' >
                         <div className='random style-details-card'>random</div>
                         <div className='index style-details-card'>[00]</div>
                     </div>
-                    <div className='card-photo' style={{ height: 'inherit', width: 'inherit', backgroundColor: '#D2D2D2' }}>
+                    <div className='card-photo' >
 
                     </div>
                 </div>
