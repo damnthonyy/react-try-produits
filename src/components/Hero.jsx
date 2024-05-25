@@ -1,5 +1,6 @@
 import '../scss/hero.scss';
 
+
 export default function Hero() {
     return (
         <>
@@ -39,7 +40,6 @@ export default function Hero() {
 
 
             </div>
-
 
 
 

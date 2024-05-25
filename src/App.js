@@ -11,7 +11,13 @@ import Studio from "./pages/Studio.jsx";
 import Services from "./pages/Services.jsx";
 import Contacts from "./pages/Contacts.jsx";
 import Gallery from "./pages/Gallery.jsx";
+import { useEffect, useState } from 'react';
+import Loader from './components/Loader.jsx';
+import { CSSTransition } from 'react-transition-group';
 
+import Card from "./components/Card.jsx";
+import worksDetails from "./data.js";
+import DetailsCard from './pages/DetailsCard.jsx';
 
 const App = () => {
 
@@ -27,9 +33,31 @@ const App = () => {
     requestAnimationFrame(raf)
   }
 
+
   requestAnimationFrame(raf)
 
-  return (
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fakeDataFetch = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
+    }
+
+    fakeDataFetch();
+  }, [])
+
+  const data = { worksDetails };
+  console.log(data);
+
+
+  return isLoading ? (
+    <CSSTransition in={isLoading} timeout={500} classNames="loader" unmountOnExit>
+      <Loader />
+    </CSSTransition>
+
+  ) : (
     <>
 
       <Router>
@@ -40,6 +68,8 @@ const App = () => {
           <Route path="/Services" element={<Services />} />
           <Route path="/Contacts" element={<Contacts />} />
           <Route path="/Gallery" element={<Gallery />} />
+          <Route path="/Gallery" element=< Card data={data} /> />
+          <Route path="/Details/:name" element=< DetailsCard data={data} /> />
         </Routes>
       </Router>
     </>

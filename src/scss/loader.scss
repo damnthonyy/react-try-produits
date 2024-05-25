@@ -1,0 +1,54 @@
+.loader-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+    text-align: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) ease-out;
+}
+
+.title-loader {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    margin-top: 50vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+    .span-s {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+}
+
+.loader-enter {
+    opacity: 0;
+}
+
+.loader-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.loader-exit {
+    opacity: 1;
+}
+
+.loader-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}

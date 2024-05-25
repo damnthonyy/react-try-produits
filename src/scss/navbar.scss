@@ -77,7 +77,9 @@
 
         .navLink {
             background-color: #D9D9D9;
-            display: block !important;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: space-between;
             top: -100vh;
             position: absolute;
             left: 0;
@@ -90,7 +92,9 @@
 
         .navLink.isActive {
             background-color: #D9D9D9;
-            display: block !important;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: space-between;
             top: 0;
             position: absolute;
             left: 0;
@@ -128,7 +132,7 @@
 
         .rMobile {
             display: block !important;
-            margin-top: 35vh;
+            margin-bottom: 2vh;
             padding-left: 2vw;
             padding-right: 2vw;
 
@@ -172,7 +176,9 @@
 
         .navLink {
             background-color: #D9D9D9;
-            display: block !important;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: space-between;
             top: -100vh;
             position: absolute;
             left: 0;
@@ -185,7 +191,9 @@
 
         .navLink.isActive {
             background-color: #D9D9D9;
-            display: block !important;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: space-between;
             top: 0;
             position: absolute;
             left: 0;
@@ -223,7 +231,7 @@
 
         .rMobile {
             display: block !important;
-            margin-top: 35vh;
+            margin-bottom: 2vh;
             padding-left: 2vw;
             padding-right: 2vw;
 
