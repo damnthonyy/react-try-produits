@@ -22,7 +22,7 @@ const worksDetails = [
     {
         id: 2,
         imgProfilUrl: 'path-of-img.jpg',
-        name: "birthday of antoine",
+        name: "birthday of Sam",
         date: "12-04-2002",
 
 
@@ -41,7 +41,7 @@ const worksDetails = [
     {
         id: 3,
         imgProfilUrl: 'path-of-img.jpg',
-        name: "birthday of antoine",
+        name: "birthday of Lin",
         date: "12-04-2002",
 
 
@@ -60,13 +60,13 @@ const worksDetails = [
     {
         id: 4,
         imgProfilUrl: 'path-of-img.jpg',
-        name: "birthday of antoine",
+        name: "birthday of ototo",
         date: "12-04-2002",
 
 
         details: {
             imgBackgroundUrl: 'path-of-bg-img.jpg',
-            synopsis: 'lorem ipsum',
+            synopsis: 'mercon',
             packageImg: {
                 pckImg1: 'path-of-pck-img-1.jpg',
                 pckImg2: 'path-of-pck-img-2.jpg',

@@ -4,22 +4,24 @@ import worksDetails from "../data";
 
 export default function DetailsCard() {
 
-    const data = { worksDetails };
+    /*  const data = { worksDetails }; */
     const { name } = useParams();
 
-    console.log(data);
+    const detailFilter = worksDetails.filter((item) => (item.name === name));
+    console.log();
+
+    const item = worksDetails.find(item => item.name === name)
     return (
         <>
 
-            <div className="wrapper">
+            <div className="wrapper" style={{ marginTop: '30vh' }}>
                 <div className="container">
-                    {data
-                        .filter((item) => (item.name === name)
-                            .map((item, index) => (
-                                <div className="detail" key={index}>
-                                    <p>{item.date}</p>
-                                </div>
-                            )))
+                    {detailFilter
+                        .map((item, index) => (
+                            <div className="detail" key={index}>
+                                <p>{item.details.synopsis}</p>
+                            </div>
+                        ))
                     }
                 </div>
             </div>

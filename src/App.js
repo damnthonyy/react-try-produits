@@ -70,6 +70,7 @@ const App = () => {
           <Route path="/Gallery" element={<Gallery />} />
           <Route path="/Gallery" element=< Card data={data} /> />
           <Route path="/Details/:name" element=< DetailsCard data={data} /> />
+
         </Routes>
       </Router>
     </>

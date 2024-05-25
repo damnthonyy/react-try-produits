@@ -1,22 +1,23 @@
 
 
 
+import worksDetails from '../data.js';
 import '../scss/card.scss';
 
 import { Link } from 'react-router-dom';
 
 
 
-export default function Card({ data }) {
+export default function Card() {
 
     return (
         <>
 
-            <div className='wrapper' style={{ backgroundColor: '#000', }}>
+            <div className='wrapper' style={{ color: '#000', }}>
                 <div className='card-works'>
-                    {data.map((item, index) => (
+                    {worksDetails.map((item, index) => (
 
-                        <Link to={`/Details/${item.name}/`} >
+                        <Link key={index} to={`/Details/${item.name}/`} >
                             <div className='card' key={index}>
                                 <h3>{item.name}</h3>
                                 <p> {item.date}</p>
